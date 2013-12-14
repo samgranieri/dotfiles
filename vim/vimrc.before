@@ -1,0 +1,3 @@
+let g:Powerline_symbols = 'fancy'
+runtime! ftplugin/man.vim
+"let g:session_autoload = 'no'

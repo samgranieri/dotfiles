@@ -1,0 +1,32 @@
+
+ set background=dark
+ let g:solarized_termtrans=1
+ let g:solarized_termcolors=256
+ colorscheme solarized
+ " Removes trailing spaces
+ function TrimWhiteSpace()
+   %s/\s*$//
+   ''
+ :endfunction
+ 
+ "set list listchars=trail:.,extends:>
+ "autocmd FileWritePre * :call TrimWhiteSpace()
+ "autocmd FileAppendPre * :call TrimWhiteSpace()
+ "autocmd FilterWritePre * :call TrimWhiteSpace()
+ "autocmd BufWritePre * :call TrimWhiteSpace()
+ 
+ map <F2> :call TrimWhiteSpace()<CR>
+ map! <F2> :call TrimWhiteSpace()<CR>
+ nnoremap <F3> :NumbersToggle<CR>
+ au BufRead ~/.tmux.conf set ft=tmux
+ 
+ "autocmd User Rails Rnavcommand fabricator  spec/fabricators -suffix=_fabricator.rb -default=model()
+ "autocmd User Rails Rnavcommand factory     spec/factories -suffix=.rb -default=model()
+ "autocmd User Rails Rnavcommand routes      config                             -glob =*.*  -default=routes.rb -suffix=
+ "autocmd User Rails Rnavcommand worker      app/workers                        -glob =**/*                    -suffix= .rb
+ "autocmd User Rails Rnavcommand decorator   app/decorators                     -glob =**/*                    -suffix= _decorator.rb
+ "autocmd User Rails Rnavcommand uploader    app/uploaders                      -glob =**/*                    -suffix= _uploader.rb
+ "autocmd User Rails Rnavcommand jmodel      app/assets/javascripts/models      -glob =**/*                    -suffix= .coffee
+ "autocmd User Rails Rnavcommand jview       app/assets/javascripts/views       -glob =**/*                    -suffix= .coffee
+ "autocmd User Rails Rnavcommand jcollection app/assets/javascripts/collections -glob =**/*                    -suffix= .coffee
+ "autocmd User Rails Rnavcommand jrouter     app/assets/javascripts/routers     -glob =**/*                    -suffix= .coffee
