@@ -12,4 +12,6 @@ end
 
 def link_file(real, fake)
   puts "linking ~/#{real} to ~/#{fake}"
+  system %Q{rm -f "$HOME/#{fake}"}
+  #system %Q{ln -s "$PWD/#{real}" "$HOME/#{fake}"}
 end
